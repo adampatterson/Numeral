@@ -1,10 +1,11 @@
 <?php
 
 namespace App\AdamPatterson;
-
 /**
  * Class Numeral
  * @package App\AdamPatterson
+ * @author Adam Patterson <http://github.com/adampatterson>
+ * @link  https://github.com/adampatterson/Numeral-php
  */
 class Numeral
 {
