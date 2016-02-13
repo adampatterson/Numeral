@@ -9,36 +9,37 @@ Chances are it will not even work out of the Box, I litterally copied the code f
 
 ###Numbers
 ```
-var_dump($numeral->number('85193.456')->format());
-var_dump($numeral->number('85193.456')->format('0.00'));
-var_dump($numeral->number('85193.456')->format('0,0.00'));
-var_dump($numeral->number('-85193.00')->format());
-var_dump($numeral->number('-85193')->format('0.00'));
+var_dump($numeral->number('85193.456')->format()); // 85193
+var_dump($numeral->number('85193.456')->format('0.00')); // 85193.46
+var_dump($numeral->number('85193.456')->format('0,0.00')); // 85,193.46
+var_dump($numeral->number('-85193.00')->format()); // -85193
+var_dump($numeral->number('-85193')->format('0.00')); // -85193.00
 ```
 
 ###Currency
 ```
-var_dump($numeral->number('85187993.00')->format('$0,0.00'));
-var_dump($numeral->number('$85187993.00')->format('$0.00'));
-var_dump($numeral->number('85187993.00')->format('$0'));
+var_dump($numeral->number('85187993.00')->format('$0,0.00')); // $85,187,993.00
+var_dump($numeral->number('$85187993.00')->format('$0.00')); // $85,187,993.00
+var_dump($numeral->number('85187993.00')->format('$0')); // $85,187,993
 ```
 
 ###Percentages
 
 ```
-var_dump($numeral->number('-0.43')->format('0%'));
-var_dump($numeral->number('0.43')->format('0%'));
+var_dump($numeral->number('-0.43')->format('0%')); // -43%
+var_dump($numeral->number('0.75')->format('0%')); // 75%
 ```
 
 ###Time
 
 ```
-var_dump($numeral->number('25')->format('00:00:00'));
-var_dump($numeral->number('238')->format('00:00:00'));
-var_dump($numeral->number('63846')->format('00:00:00'));
+var_dump($numeral->number('25')->format('00:00:00')); // 0:00:25
+var_dump($numeral->number('238')->format('00:00:00')); // 0:03:58
+var_dump($numeral->number('63846')->format('00:00:00')); // 17:44:06
 ```
 
-###Unformat
+###Unformat 
+Work in progress.
 ```
 var_dump($numeral->number('-43%')->unformat());
 var_dump($numeral->number('75%')->unformat());
