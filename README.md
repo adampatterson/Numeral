@@ -19,8 +19,9 @@ var_dump($numeral->number('-85193')->format('0.00')); // -85193.00
 ###Currency
 ```
 var_dump($numeral->number('85187993.00')->format('$0,0.00')); // $85,187,993.00
-var_dump($numeral->number('$85187993.00')->format('$0.00')); // $85,187,993.00
-var_dump($numeral->number('85187993.00')->format('$0')); // $85,187,993
+var_dump($numeral->number('85187993.00')->format('$0,0')); // $85,187,993
+var_dump($numeral->number('$85187993.00')->format('$0.00')); // $85187993.00
+var_dump($numeral->number('85187993.00')->format('$0')); // $85187993
 ```
 
 ###Percentages
