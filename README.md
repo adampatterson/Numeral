@@ -39,11 +39,4 @@ var_dump($numeral->number('63846')->format('00:00:00')); // 17:44:06
 ```
 
 ###Unformat 
-Work in progress.
-```
-var_dump($numeral->number('-43%')->unformat());
-var_dump($numeral->number('75%')->unformat());
-var_dump($numeral->number('17:44:06')->unformat());
-var_dump($numeral->number('$85,187,993.00')->unformat());
-var_dump($numeral->number('$85,187,993.00')->unformat('0.00'));
-```
+**Work in progress.**
