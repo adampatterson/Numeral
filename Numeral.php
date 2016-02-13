@@ -46,14 +46,14 @@ class Numeral
     {
         $this->format = $format;
 
-        // figure out what kind of format we are dealing with
-        if (strpos($format, '$') > -1) { // currency
+        // Figure out what kind of format we are dealing with
+        if (strpos($format, '$') > -1) { // Currency
             $output = $this->formatCurrency();
-        } elseif (strpos($format, '%') > -1) { // percentage
+        } elseif (strpos($format, '%') > -1) { // Percentage
             $output = $this->formatPercentage();
-        } elseif (strpos($format, ':') > -1) { // time
+        } elseif (strpos($format, ':') > -1) { // Time
             $output = $this->formatTime();
-        } else { // regualr numbers
+        } else { // Regualr numbers
             $output = $this->formatNumber();
         }
 
