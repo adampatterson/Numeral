@@ -91,12 +91,12 @@ class Numeral
         $decimals = strlen(substr(strrchr($this->format, "."), 1));
 
         if (strpos($this->format, ',') > -1) {
-            $new_number = '$' . number_format($this->number, $decimals);
+            $new_number = number_format($this->number, $decimals);
         } else {
-            $new_number = '$' . number_format($this->number, $decimals, ',', '');
+            $new_number = number_format($this->number, $decimals, ',', '');
         }
 
-        return $new_number;
+        return '$' . $new_number;
     }
 
     /**
