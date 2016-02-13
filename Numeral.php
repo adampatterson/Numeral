@@ -1,6 +1,7 @@
 <?php
 
 namespace App\AdamPatterson;
+
 /**
  * Class Numeral
  * @package App\AdamPatterson
@@ -58,7 +59,10 @@ class Numeral
             $output = $this->formatNumber();
         }
 
-        return ['number' => $this->number, 'format' => $this->format, 'output' => $output];
+//        return ['number' => $this->number, 'format' => $this->format, 'output' => $output];
+        return ['format' => $this->format, 'output' => $output];
+
+        return $output;
     }
 
 
@@ -86,7 +90,11 @@ class Numeral
 
         $decimals = strlen(substr(strrchr($this->format, "."), 1));
 
-        $new_number = '$' . number_format($this->number, $decimals);
+        if (strpos($this->format, ',') > -1) {
+            $new_number = '$' . number_format($this->number, $decimals);
+        } else {
+            $new_number = '$' . number_format($this->number, $decimals, ',', '');
+        }
 
         return $new_number;
     }
