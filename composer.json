@@ -1,5 +1,5 @@
 {
-  "name": "adampatterson/numeral-php",
+  "name": "adampatterson/numeral",
   "description": "A PHP library for formatting and manipulating numbers.",
   "keywords": ["numbers", "numerals", "format", "time", "percentage"],
   "license": "MIT",
