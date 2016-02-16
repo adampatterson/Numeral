@@ -16,7 +16,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "adampatterson\\numeral-php\\": "src/"
+      "Numeral\\": "src/Numeral"
     }
   }
 }
