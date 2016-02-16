@@ -4,7 +4,7 @@ namespace AdamPatterson\Numeral;
 
 /**
  * Class Numeral
- * @package App\AdamPatterson
+ * @package AdamPatterson\Numeral
  * @author Adam Patterson <http://github.com/adampatterson>
  * @link  https://github.com/adampatterson/Numeral-php
  */
