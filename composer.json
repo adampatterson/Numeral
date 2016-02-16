@@ -1,7 +1,7 @@
 {
   "name": "adampatterson/numeral-php",
   "description": "A PHP library for formatting and manipulating numbers.",
-  "keywords": ["numbers", "Numerals", "String Format", "Number Format"],
+  "keywords": ["numbers", "numerals", "format", "time", "percentage"],
   "authors": [
     {
       "name": "Adam Patterson",
