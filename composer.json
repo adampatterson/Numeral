@@ -8,6 +8,10 @@
       "email": "hello@adampatterson.ca"
     }
   ],
+  "support": {
+    "issues": "https://github.com/adampatterson/Numeral-php/issues",
+    "source": "https://github.com/adampatterson/Numeral-php"
+  },
   "require": {},
   "require-dev": {},
   "autoload": {
