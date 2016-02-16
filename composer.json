@@ -17,7 +17,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "Numeral\\": "src/Numeral"
+      "AdamPatterson\\Numeral\\": "src/"
     }
   }
 }
