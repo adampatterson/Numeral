@@ -2,6 +2,7 @@
   "name": "adampatterson/numeral-php",
   "description": "A PHP library for formatting and manipulating numbers.",
   "keywords": ["numbers", "numerals", "format", "time", "percentage"],
+  "license": "MIT",
   "authors": [
     {
       "name": "Adam Patterson",
