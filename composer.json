@@ -1,0 +1,10 @@
+{
+  "name": "adampatterson/Numeral-php",
+  "require": {},
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "adampatterson\\Numeral-php\\": "src/"
+    }
+  }
+}
