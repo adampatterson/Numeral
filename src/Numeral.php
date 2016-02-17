@@ -1,6 +1,6 @@
 <?php
 
-namespace AdamPatterson\Numeral;
+namespace Numeral;
 
 /**
  * Class Numeral
