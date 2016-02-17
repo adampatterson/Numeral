@@ -12,6 +12,7 @@ class SomeController extends Controller
     public function myMethod(Numeral $numeral){
         $numeral->number('85193.456')->format()
     }
+    
     // OR
 
     public function myOtherMethod(){
