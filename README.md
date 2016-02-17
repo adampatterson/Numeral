@@ -3,6 +3,23 @@ A PHP library for formatting and manipulating numbers.
 
 This script is still under development and a PHP clone of [Numeral-js](https://github.com/adamwdraper/Numeral-js) by [Adam Draper](https://github.com/adamwdraper).
 
+###Sample Ussage
+```
+use Numeral\Numeral;
+
+class SomeController extends Controller
+{
+    public function myMethod(Numeral $numeral){
+        $numeral->number('85193.456')->format()
+    }
+    // OR
+
+    public function myOtherMethod(){
+        Numeral::number('85193.456')->format()
+    }
+}
+```
+
 ###Numbers
 ```
 var_dump($numeral->number('85193.456')->format()); // 85193

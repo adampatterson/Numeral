@@ -14,30 +14,28 @@ class Numeral
     /**
      * @var string
      */
-    private $number;
+    private static $number = '';
     /**
      * @var string
      */
-    private $format;
+    private static $format = '0,0';
 
     /**
      * Numeral constructor.
      */
     public function __construct()
     {
-        $this->number = "";
-        $this->format = '0,0';
     }
 
     /**
      * @param $number
      * @return $this
      */
-    public function number($number)
+    public static function number($number)
     {
-        $this->number = $number;
+        self::$number = $number;
 
-        return $this;
+        return new static(null, $number);
     }
 
     /**
@@ -46,7 +44,7 @@ class Numeral
      */
     public function format($format = null)
     {
-        $this->format = $format;
+        self::$format = $format;
 
         // Figure out what kind of format we are dealing with
         if (strpos($format, '$') > -1) { // Currency
@@ -59,8 +57,8 @@ class Numeral
             $output = $this->formatNumber();
         }
 
-//        return ['number' => $this->number, 'format' => $this->format, 'output' => $output];
-        return ['format' => $this->format, 'output' => $output];
+//        return ['number' => self::$number, 'format' => $this->format, 'output' => $output];
+        return ['format' => self::$format, 'output' => $output];
 
         return $output;
     }
@@ -72,11 +70,11 @@ class Numeral
      */
     public function unformat($unformat = null)
     {
-        if (strpos($this->number, '$') > -1) {
-            $this->number = str_replace('$', '', $this->number);
+        if (strpos(self::$number, '$') > -1) {
+            self::$number = str_replace('$', '', self::$number);
         }
 
-        return $this->number;
+        return self::$number;
     }
 
     /**
@@ -84,16 +82,16 @@ class Numeral
      */
     public function formatCurrency()
     {
-        if (strpos($this->number, '$') > -1) {
-            $this->number = str_replace('$', '', $this->number);
+        if (strpos(self::$number, '$') > -1) {
+            self::$number = str_replace('$', '', self::$number);
         }
 
-        $decimals = strlen(substr(strrchr($this->format, "."), 1));
+        $decimals = strlen(substr(strrchr(self::$format, "."), 1));
 
-        if (strpos($this->format, ',') > -1) {
-            $new_number = number_format($this->number, $decimals);
+        if (strpos(self::$format, ',') > -1) {
+            $new_number = number_format(self::$number, $decimals);
         } else {
-            $new_number = number_format($this->number, $decimals, ',', '');
+            $new_number = number_format(self::$number, $decimals, ',', '');
         }
 
         return '$' . $new_number;
@@ -104,7 +102,7 @@ class Numeral
      */
     public function formatPercentage()
     {
-        $new_number = $this->number * 100;
+        $new_number = self::$number * 100;
 
         return $new_number . '%';
     }
@@ -114,7 +112,7 @@ class Numeral
      */
     public function formatTime()
     {
-        $time = $this->number;
+        $time = self::$number;
         $hours = floor($time / 60 / 60);
         $minutes = floor(($time - ($hours * 60 * 60)) / 60);
         $seconds = round($time - ($hours * 60 * 60) - ($minutes * 60));
@@ -127,12 +125,12 @@ class Numeral
      */
     public function formatNumber()
     {
-        $decimals = strlen(substr(strrchr($this->format, "."), 1));
+        $decimals = strlen(substr(strrchr(self::$format, "."), 1));
 
-        if (strpos($this->format, ",") === false) {
-            return number_format($this->number, $decimals, '.', '');
+        if (strpos(self::$format, ",") === false) {
+            return number_format(self::$number, $decimals, '.', '');
         } else {
-            return number_format($this->number, $decimals);
+            return number_format(self::$number, $decimals);
         }
     }
 }
