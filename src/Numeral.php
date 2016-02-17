@@ -4,7 +4,7 @@ namespace Numeral;
 
 /**
  * Class Numeral
- * @package AdamPatterson\Numeral
+ * @package Numeral
  * @author Adam Patterson <http://github.com/adampatterson>
  * @link  https://github.com/adampatterson/Numeral
  */
