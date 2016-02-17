@@ -17,7 +17,6 @@
     "require": {},
     "require-dev": {},
     "autoload": {
-        "classmap": [],
         "psr-4": {
             "Numeral": "src/"
         }
