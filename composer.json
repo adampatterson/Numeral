@@ -1,23 +1,24 @@
 {
-  "name": "adampatterson/numeral",
-  "description": "A PHP library for formatting and manipulating numbers.",
-  "keywords": ["numbers", "numerals", "format", "time", "percentage"],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Adam Patterson",
-      "email": "hello@adampatterson.ca"
+    "name": "adampatterson/numeral",
+    "description": "A PHP library for formatting and manipulating numbers.",
+    "keywords": ["numbers", "numerals", "format", "time", "percentage"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adam Patterson",
+            "email": "hello@adampatterson.ca"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/adampatterson/Numeral-php/issues",
+        "source": "https://github.com/adampatterson/Numeral-php"
+    },
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "AdamPatterson\\Numeral\\": "src"
+        }
     }
-  ],
-  "support": {
-    "issues": "https://github.com/adampatterson/Numeral-php/issues",
-    "source": "https://github.com/adampatterson/Numeral-php"
-  },
-  "require": {},
-  "require-dev": {},
-  "autoload": {
-    "psr-4": {
-      "AdamPatterson\\Numeral\\": "src"
-    }
-  }
 }
