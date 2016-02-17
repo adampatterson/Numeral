@@ -6,7 +6,7 @@ This script is still under development and a PHP clone of [Numeral-js](https://g
 ## Install
 
 ```
-composer require nesbot/carbon
+composer require adampatterson/numeral
 ```
 
 
