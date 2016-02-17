@@ -4,7 +4,6 @@ A PHP library for formatting and manipulating numbers.
 This script is still under development and a PHP clone of [Numeral-js](https://github.com/adamwdraper/Numeral-js) by [Adam Draper](https://github.com/adamwdraper).
 
 ## Install
-----
 
 ```
 composer require nesbot/carbon
@@ -12,7 +11,6 @@ composer require nesbot/carbon
 
 
 ## Ussage
----
 ```
 use Numeral\Numeral;
 
