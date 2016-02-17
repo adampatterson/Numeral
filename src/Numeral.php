@@ -1,12 +1,12 @@
 <?php
 
-namespace Numeral;
+namespace AdamPatterson\Numeral;
 
 /**
  * Class Numeral
  * @package AdamPatterson\Numeral
  * @author Adam Patterson <http://github.com/adampatterson>
- * @link  https://github.com/adampatterson/Numeral-php
+ * @link  https://github.com/adampatterson/Numeral
  */
 class Numeral
 {

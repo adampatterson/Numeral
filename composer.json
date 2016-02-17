@@ -17,8 +17,9 @@
     "require": {},
     "require-dev": {},
     "autoload": {
+        "classmap": [],
         "psr-4": {
-            "AdamPatterson\\Numeral\\": "src"
+            "Numeral": "src/"
         }
     }
 }
