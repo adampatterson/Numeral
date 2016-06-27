@@ -11,8 +11,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/goauto/goauto-package/issues",
-        "source": "https://github.com/goauto/goauto-package"
+        "issues": "https://github.com/adampatterson/Numeral/issues",
+        "source": "https://github.com/adampatterson/Numeral"
     },
     "require": {},
     "require-dev": {},
