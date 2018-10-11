@@ -9,6 +9,16 @@ This script is still under development and a PHP clone of [Numeral-js](https://g
 composer require adampatterson/numeral
 ```
 
+## For use in Laravel Views ( Blade files )
+
+Open `config/app.php` and add Numeral to the aliases array.
+
+```
+'Numeral'      => Numeral\Numeral::class
+```
+
+`{{ \Numeral::number(85193.456)->format('0.00') }}`
+
 
 ## Ussage
 ```
