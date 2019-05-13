@@ -29,6 +29,7 @@ class Numeral
 
     /**
      * @param $number
+     *
      * @return $this
      */
     public static function number($number)
@@ -40,6 +41,7 @@ class Numeral
 
     /**
      * @param null $format
+     *
      * @return array
      */
     public function format($format = null)
@@ -53,7 +55,7 @@ class Numeral
             $output = $this->formatPercentage();
         } elseif (strpos($format, ':') > -1) { // Time
             $output = $this->formatTime();
-        } else { // Regualr numbers
+        } else { // Regular numbers
             $output = $this->formatNumber();
         }
 
@@ -65,14 +67,17 @@ class Numeral
 
 
     /**
-     * @param null $unformat
+     * @param null $format
+     *
      * @return string
      */
-    public function unformat($unformat = null)
+    public function unformat($format = null)
     {
-        if (strpos(self::$number, '$') > -1) {
-            self::$number = str_replace('$', '', self::$number);
-        }
+        self::$format = $format;
+
+        self::$number = filter_var(self::$number, FILTER_SANITIZE_NUMBER_INT);
+
+        self::$number = $this->format($format);
 
         return self::$number;
     }
@@ -82,6 +87,7 @@ class Numeral
      */
     public function formatCurrency()
     {
+
         if (strpos(self::$number, '$') > -1) {
             self::$number = str_replace('$', '', self::$number);
         }
@@ -112,8 +118,8 @@ class Numeral
      */
     public function formatTime()
     {
-        $time = self::$number;
-        $hours = floor($time / 60 / 60);
+        $time    = self::$number;
+        $hours   = floor($time / 60 / 60);
         $minutes = floor(($time - ($hours * 60 * 60)) / 60);
         $seconds = round($time - ($hours * 60 * 60) - ($minutes * 60));
 
