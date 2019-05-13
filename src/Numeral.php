@@ -57,8 +57,8 @@ class Numeral
             $output = $this->formatNumber();
         }
 
-//        return ['number' => self::$number, 'format' => $this->format, 'output' => $output];
-        return ['format' => self::$format, 'output' => $output];
+        // return ['number' => self::$number, 'format' => $this->format, 'output' => $output];
+        // return ['format' => self::$format, 'output' => $output];
 
         return $output;
     }

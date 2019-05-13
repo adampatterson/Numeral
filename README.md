@@ -3,11 +3,21 @@ A PHP library for formatting and manipulating numbers.
 
 This script is still under development and a PHP clone of [Numeral-js](https://github.com/adamwdraper/Numeral-js) by [Adam Draper](https://github.com/adamwdraper).
 
-## Install
+## Install from [Packagist](https://packagist.org/packages/adampatterson/numeral)
 
 ```
 composer require adampatterson/numeral
 ```
+
+## For use in Laravel Views ( Blade files )
+
+Open `config/app.php` and add Numeral to the aliases array.
+
+```
+'Numeral'      => Numeral\Numeral::class
+```
+
+`{{ \Numeral::number(85193.456)->format('0.00') }}`
 
 
 ## Ussage
@@ -28,7 +38,7 @@ class SomeController extends Controller
 }
 ```
 
-###Numbers
+### Numbers
 ```
 var_dump(Numeral::number('85193.456')->format()); // 85193
 var_dump(Numeral::number('85193.456')->format('0.00')); // 85193.46
@@ -37,7 +47,7 @@ var_dump(Numeral::number('-85193.00')->format()); // -85193
 var_dump(Numeral::number('-85193')->format('0.00')); // -85193.00
 ```
 
-###Currency
+### Currency
 ```
 var_dump(Numberal::number('85187993.00')->format('$0,0.00')); // $85,187,993.00
 var_dump(Numberal::number('85187993.00')->format('$0,0')); // $85,187,993
@@ -45,14 +55,14 @@ var_dump(Numberal::number('$85187993.00')->format('$0.00')); // $85187993.00
 var_dump(Numberal::number('85187993.00')->format('$0')); // $85187993
 ```
 
-###Percentages
+### Percentages
 
 ```
 var_dump(Numberal::number('-0.43')->format('0%')); // -43%
 var_dump(Numberal::number('0.75')->format('0%')); // 75%
 ```
 
-###Time
+### Time
 
 ```
 var_dump(Numberal::number('25')->format('00:00:00')); // 0:00:25
@@ -60,5 +70,5 @@ var_dump(Numberal::number('238')->format('00:00:00')); // 0:03:58
 var_dump(Numberal::number('63846')->format('00:00:00')); // 17:44:06
 ```
 
-###Unformat 
+### Unformat 
 **Work in progress.**
