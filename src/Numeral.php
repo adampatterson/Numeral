@@ -65,7 +65,6 @@ class Numeral
         return $output;
     }
 
-
     /**
      * @param null $format
      *
@@ -73,13 +72,20 @@ class Numeral
      */
     public function unformat($format = null)
     {
-        self::$format = $format;
+        $decimals = $this->getDecimals();
 
         self::$number = filter_var(self::$number, FILTER_SANITIZE_NUMBER_INT);
 
-        self::$number = $this->format($format);
+        if ($decimals != 0) {
+            self::$number = number_format(self::$number / 100, $decimals, '.', '');
+        }
 
-        return self::$number;
+        return $this->format($format);
+    }
+
+    public function getDecimals()
+    {
+        return (int)strlen(substr(strrchr(self::$number, "."), 1));
     }
 
     /**
@@ -87,17 +93,16 @@ class Numeral
      */
     public function formatCurrency()
     {
-
         if (strpos(self::$number, '$') > -1) {
             self::$number = str_replace('$', '', self::$number);
         }
 
-        $decimals = strlen(substr(strrchr(self::$format, "."), 1));
+        $decimals = $this->getDecimals();
 
         if (strpos(self::$format, ',') > -1) {
             $new_number = number_format(self::$number, $decimals);
         } else {
-            $new_number = number_format(self::$number, $decimals, ',', '');
+            $new_number = number_format(self::$number, $decimals, '.', ',');
         }
 
         return '$' . $new_number;
@@ -131,7 +136,7 @@ class Numeral
      */
     public function formatNumber()
     {
-        $decimals = strlen(substr(strrchr(self::$format, "."), 1));
+        $decimals = $this->getDecimals();
 
         if (strpos(self::$format, ",") === false) {
             return number_format(self::$number, $decimals, '.', '');
