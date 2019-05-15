@@ -72,7 +72,7 @@ class Numeral
      */
     public function unformat($format = null)
     {
-        $decimals = $this->getDecimals();
+        $decimals = $this->getDecimals(self::$number);
 
         self::$number = filter_var(self::$number, FILTER_SANITIZE_NUMBER_INT);
 
@@ -83,9 +83,9 @@ class Numeral
         return $this->format($format);
     }
 
-    public function getDecimals()
+    public function getDecimals($decimals)
     {
-        return (int)strlen(substr(strrchr(self::$number, "."), 1));
+        return (int)strlen(substr(strrchr($decimals, "."), 1));
     }
 
     /**
@@ -97,7 +97,7 @@ class Numeral
             self::$number = str_replace('$', '', self::$number);
         }
 
-        $decimals = $this->getDecimals();
+        $decimals = $this->getDecimals(self::$format);
 
         if (strpos(self::$format, ',') > -1) {
             $new_number = number_format(self::$number, $decimals);
@@ -136,7 +136,7 @@ class Numeral
      */
     public function formatNumber()
     {
-        $decimals = $this->getDecimals();
+        $decimals = $this->getDecimals(self::$format);
 
         if (strpos(self::$format, ",") === false) {
             return number_format(self::$number, $decimals, '.', '');
