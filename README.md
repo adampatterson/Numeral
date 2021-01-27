@@ -1,7 +1,10 @@
 # Numeral-php
+![PHP Composer](https://github.com/adampatterson/Numeral/workflows/PHP%20Composer/badge.svg?branch=master)
+
 A PHP library for formatting and manipulating numbers. 
 
 This script is still under development and a PHP clone of [Numeral-js](https://github.com/adamwdraper/Numeral-js) by [Adam Draper](https://github.com/adamwdraper).
+
 
 ## Install from [Packagist](https://packagist.org/packages/adampatterson/numeral)
 
