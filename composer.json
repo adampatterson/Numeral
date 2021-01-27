@@ -14,8 +14,9 @@
         "issues": "https://github.com/adampatterson/Numeral/issues",
         "source": "https://github.com/adampatterson/Numeral"
     },
-    "require": {},
-    "require-dev": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
     "autoload": {
         "psr-4": {
             "Numeral\\": "src/"
