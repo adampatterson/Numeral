@@ -1,5 +1,5 @@
 # Numeral PHP
-![PHP Composer](https://github.com/adampatterson/Numeral/workflows/PHP%20Composer/badge.svg?branch=master)
+![PHP Composer](https://github.com/adampatterson/Numeral/workflows/PHP%20Composer/badge.svg?branch=main)
 
 A PHP library for formatting and manipulating numbers. 
 
