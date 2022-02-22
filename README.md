@@ -23,7 +23,7 @@ Open `config/app.php` and add Numeral to the aliases array.
 `{{ \Numeral::number(85193.456)->format('0.00') }}`
 
 
-## Ussage
+## Usage
 ```
 use Numeral\Numeral;
 
@@ -73,6 +73,21 @@ var_dump(Numeral::number('238')->format('00:00:00')); // 0:03:58
 var_dump(Numeral::number('63846')->format('00:00:00')); // 17:44:06
 ```
 
-### Unformat 
+### Un-format 
 
 **Work in progress.**
+
+
+## Tests
+
+```
+$ composer global require phpunit/phpunit
+$ export PATH=~/.composer/vendor/bin:$PATH
+$ which phpunit
+~/.composer/vendor/bin/phpunit
+```
+
+`composer run-script test`
+
+## Local Dev
+`ln -s ~/Sites/personal/_packages/Numeral/ ~/Sites/personal/projectName/vendor/adampatterson/Numeral`
