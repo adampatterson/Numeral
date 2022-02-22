@@ -50,14 +50,6 @@ var_dump(Numeral::number('-85193.00')->format()); // -85193
 var_dump(Numeral::number('-85193')->format('0.00')); // -85193.00
 ```
 
-### Currency
-```
-var_dump(Numeral::number('85187993.00')->format('$0,0.00')); // $85,187,993.00
-var_dump(Numeral::number('85187993.00')->format('$0,0')); // $85,187,993
-var_dump(Numeral::number('$85187993.00')->format('$0.00')); // $85187993.00
-var_dump(Numeral::number('85187993.00')->format('$0')); // $85187993
-```
-
 ### Percentages
 
 ```
@@ -71,6 +63,15 @@ var_dump(Numeral::number('0.75')->format('0%')); // 75%
 var_dump(Numeral::number('25')->format('00:00:00')); // 0:00:25
 var_dump(Numeral::number('238')->format('00:00:00')); // 0:03:58
 var_dump(Numeral::number('63846')->format('00:00:00')); // 17:44:06
+```
+
+### Currency
+**Work in progress.**
+```
+var_dump(Numeral::number('85187993.00')->format('$0,0.00')); // $85,187,993.00
+var_dump(Numeral::number('85187993.00')->format('$0,0')); // $85,187,993
+var_dump(Numeral::number('$85187993.00')->format('$0.00')); // $85187993.00
+var_dump(Numeral::number('85187993.00')->format('$0')); // $85187993
 ```
 
 ### Un-format 
