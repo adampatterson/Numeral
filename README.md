@@ -1,5 +1,8 @@
 # Numeral PHP
 ![PHP Composer](https://github.com/adampatterson/Numeral/workflows/PHP%20Composer/badge.svg?branch=main)
+[![Packagist Version](https://img.shields.io/packagist/v/adampatterson/numeral)](https://packagist.org/packages/adampatterson/numeral)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/adampatterson/numeral)](https://packagist.org/packages/adampatterson/numeral/stats)
+
 
 A PHP library for formatting and manipulating numbers. 
 
