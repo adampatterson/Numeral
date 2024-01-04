@@ -23,7 +23,7 @@ Open `config/app.php` and add Numeral to the aliases array.
 `{{ \Numeral::number(85193.456)->format('0.00') }}`
 
 
-## Ussage
+## Usage
 ```
 use Numeral\Numeral;
 
